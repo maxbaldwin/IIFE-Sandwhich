@@ -11,10 +11,13 @@ var SandwichMaker = (function(maker) {
   };
 
   // Augment the original object with another method
-  maker.addVeggie = function() {
-    return ???;
-  };
+  maker.addVeggie = function(selectedVeggie) {
+    return veggiesPrices[selectedVeggie];
+  }
+  makergetveggie = function(){
+    return veggiesPrices;
+  }
 
   // Return the new, augmented object with the new method on it
   return maker;
-})(SandwichMaker);
+})(SandwichMaker || {});
